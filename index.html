@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>晨裕，有些话想要跟你说。</title>
+<link href="css/main.css" rel="stylesheet">
+ <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Loading Flat UI -->
+ <link href="css/flat-ui.css" rel="stylesheet">
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/typed.min.js"></script>
+<script>
+$(function(){
+	var type1=false;
+	var type2=false;
+
+	$('#dowebok').fullpage({
+		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+		'navigation': false,
+        'navigationPosition': 'right',
+
+		afterLoad: function(anchorLink, index){
+
+			if(index==2){
+				if(!type1){
+					$("#typed-one").typed({
+	            // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+		            stringsElement: $('#typed-strings-one'),
+		            typeSpeed: 80,
+		            backDelay: 500,
+		            loop: false,
+		            contentType: 'html', // or text
+		            // defaults to false for infinite loop
+		            loopCount: false,
+		            callback: function(){$("#downCanvas").show()},
+		             preStringTyped: function() {$("#downCanvas").hide()},
+		            resetCallback: function(){}
+		       		});
+		       		type1=true;
+				}
+				
+			}
+
+			if(index==3){
+
+				if (!type2) {
+					$("#typed-two").typed({
+		            // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+		            stringsElement: $('#typed-strings-two'),
+		            typeSpeed: 80,
+		            backDelay: 500,
+		            loop: false,
+		            contentType: 'html', // or text
+		            // defaults to false for infinite loop
+		            loopCount: false,
+		            callback: function(){$("#downCanvas").show()},
+		            resetCallback: function(){},
+		            preStringTyped: function() {$("#downCanvas").hide()},
+            		//callback for every typed string
+            		onStringTyped: function() {},
+
+		       		});
+		       		type2=true;
+				}
+				
+			}
+				
+       		
+			},
+
+
+		})
+
+	});
+
+
+</script>
+</head>
+
+<body>
+
+
+<div id="down" style="position:fixed;top:75%;left:40%">
+ 			<canvas id="downCanvas" width="50" height="50">你的浏览器不支持canvas，请下载更新版本的浏览器
+ 			</canvas>
+ 			<p style="font-size:2em">滚动上下翻页</p>
+			</div>
+		<script type="text/javascript">
+						function drawDown() {
+				        var c = document.getElementById("downCanvas"),
+				            cxt = c.getContext("2d");
+				        cxt.beginPath();
+				        cxt.moveTo(5, 20);
+				        cxt.lineTo(25, 45);
+				        cxt.lineTo(45, 20);
+				        cxt.lineWidth = 5;
+				        cxt.strokeStyle = "white";
+				        cxt.lineCap = 'round';
+				        cxt.lineJoin = "round";
+				        cxt.stroke();
+				        cxt.moveTo(5, 5);
+				        cxt.lineTo(25, 30);
+				        cxt.lineTo(45, 5);
+				        cxt.lineWidth = 5;
+				        cxt.strokeStyle = "white";
+				        cxt.lineCap = 'round';
+				        cxt.lineJoin = "round";
+				        cxt.stroke();
+		    }
+		    			drawDown()
+		    </script>
+
+
+<div id="dowebok">
+
+	
+
+	<div class="section" id="one">
+		<div class="inner">
+			<p style="text-align: center;font-size:3.5em;"><br>往<br>下<br>滑<br>一<br>下<br>？</p>
+		</div>
+
+
+	</div>
+	<div class="section" id="two">
+			<div class="inner">
+			<div id="typed-strings-one" style="display:none">
+	            <span>晨裕:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我有一些话想要跟你说，却不知该如何说起，只好用不流利的文笔，想到哪里写到哪里。我不清楚你是否有大概猜测到，是的，我喜欢你。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我也不能确切的说出这种感觉是从什么时候开始，我只知道是在分科前。我喜欢你的那种气质，的确，这样说很笼统，但我想喜欢一个人不仅仅只是某个方面吧，我没有把握形容的恰当。</span>
+	        </div>
+
+			<div id="typed-box" style="font-size:2.5em">
+				<span id="typed-one" ></span>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="three">
+			<div class="inner">
+			<div id="typed-strings-two" style="display:none">
+	            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我知道我有很多的不足，比如不善于交际。我也有努力想让自己在各方面表现的更好，当然，仅仅是按我自己所谓的标准。其实也是因为我觉得我有很多不足，所以一直很纠结要不要说起喜欢你的事。我知道我仍然不够优秀，我之所以在这个时间点来跟你说，是因为我觉得时间越久机会会越来越少，所以还是想要争取一下。我知道，以我现在的情况哪怕我喜欢的人侥幸接受了我，我也可能会辜负了她，但我还是想问一句：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可以做个朋友吗？</span>
+	        </div>
+
+			<div id="typed-box">
+				<span id="typed-two" style="font-size:2.5em" ></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

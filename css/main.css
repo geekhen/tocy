@@ -1,0 +1,60 @@
+.inner{
+	height: 80%;
+	width: 80%;
+	background-color: #ffffff;
+	position: relative;
+	/*
+	left:-25.5%;
+	/*top:0%;*/
+	/* for IE */
+ 	filter:alpha(opacity=60);
+  /* CSS3 standard */
+  	opacity:0.6;
+  	left:10%;
+  	top:8%;
+
+}
+
+#one{
+	background-image: url(../bg1.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#two{
+	background-image: url(../bg2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#three{
+	background-image: url(../bg3.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@-moz-keyframes myMove {
+  0% {padding-top:30px;}
+  100% {padding-top:50px;}
+}
+@-webkit-keyframes myMove {
+  0% {padding-top:30px;}
+  100% {padding-top:50px;}
+}
+@-o-keyframes myMove {
+  0% {padding-top:30px;}
+  100% {padding-top:50px;}
+}
+@keyframes myMove {
+  0% {padding-top:30px;}
+  100% {padding-top:50px;}
+}
+#down {
+  text-align: center;
+  height: 150px;
+  -moz-animation: myMove 1s linear infinite alternate; 
+  -webkit-animation: myMove 1s linear infinite alternate;
+  -o-animation: myMove 1s linear infinite alternate;
+  animation: myMove 1s linear infinite alternate;
+  z-index: 100;
+}
