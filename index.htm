@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>晨裕，我有些话想要跟你说。</title>
 <link href="css/main.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://oipu1yzl2.bkt.clouddn.com/dialogbox.css">
 
     <!-- 你对网页代码感兴趣？ -->
 
@@ -19,6 +20,7 @@
 <script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/typed.js/1.1.4/typed.min.js"></script>
 <script src="http://cdn.bootcss.com/fullPage.js/2.9.2/jquery.fullPage.js"></script>
+<script src="http://oipu1yzl2.bkt.clouddn.com/jquery.dialogBox.js"></script>
 <link href="http://cdn.bootcss.com/flat-ui/2.3.0/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="http://cdn.bootcss.com/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet">
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261147442'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1261147442' type='text/javascript'%3E%3C/script%3E"));document.getElementById("cnzz_stat_icon_1261147442").style.display = "none";</script>
@@ -26,6 +28,10 @@
 
 <script>
 $(function(){
+
+	
+
+
 	var type1=false;
 	var type2=false;
 
@@ -84,7 +90,8 @@ $(function(){
 			},
 
 
-		})
+		});
+		setTimeout("$('#auto-close-dialogBox').dialogBox({content: '<span >做个朋友？</span>',effect: 'flip-horizontal',hasMask: true,width:450,height:150})",2000)
 
 	});
 
@@ -106,6 +113,8 @@ $(function(){
  			</canvas>
  			
 </div>
+
+	<div id="auto-close-dialogBox" style="font-size: 2.5em;"></div>
 		<script type="text/javascript">
 						function drawDown() {
 				        var c = document.getElementById("downCanvas"),
@@ -129,6 +138,7 @@ $(function(){
 				        cxt.stroke();
 		    }
 		    			drawDown()
+
 		    </script>
 
 
